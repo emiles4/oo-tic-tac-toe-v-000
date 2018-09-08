@@ -70,16 +70,16 @@ end
 end
 
 def turn
-  puts "Please enter 1-9:"
-  num = gets.chomp
-  index = input_to_index(num)
-  if valid_move? == true
-    move(input, current_player)
-    display_board
-  else
-    turn(input)
+    puts "Please enter 1-9:"
+    input = gets.strip
+    index = input.to_i
+    if valid_move?(index)
+      move(index, current_player)
+      display_board
+    else
+      turn
+    end
   end
-end
 
  def won?
      board_empty = @board.none? { |i| i == "X" || i = "O"}
