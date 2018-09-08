@@ -121,11 +121,14 @@ end
    end
 
    def play
-  turn = 0
-  while turn < 9
-    turn
-    turn += 1
-  end
-end
+     while over? == false
+       turn
+     end
+     if won?
+       puts "Congratulations #{winner}!"
+     elsif draw?
+       puts "Cat's Game!"
+     end
+   end
 
 end
