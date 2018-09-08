@@ -120,4 +120,12 @@ end
      end
    end
 
+   def play
+  turn = 0
+  while turn < 9
+    turn
+    turn += 1
+  end
+end
+
 end
